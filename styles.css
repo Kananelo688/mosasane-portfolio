@@ -1,0 +1,446 @@
+/**
+Cascading Style Sheet for Portfolio Home Page
+*/
+
+/** Base styles for all screen sizes */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #0f0033;
+    color:rgb(125, 235, 0); ;
+}
+
+/** General styles for the header */
+header {
+    background-color:rgb(9, 6, 17);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    color: rgb(0, 235, 12);
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 3px solid rgb(0, 235, 12);
+}
+
+.head-line, .name {
+    text-align: center;
+}
+
+/** Mobile-first: Flex layout for menu buttons */
+.menu-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu-buttons a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    color:  rgb(0, 235, 12);
+    cursor: pointer;
+}
+
+.menu-buttons button:hover {
+    background-color: #dfdaeb;
+    color: black;
+    transition: background-color 0.5s ease;
+    border-radius: 4px;
+}
+
+.current-page {
+    border-bottom: 1px solid  rgb(0, 235, 12);;
+}
+
+.default-hide {
+    display: none;
+}
+
+/** Footer section styling */
+footer {
+    display: block;
+    align-items: center;
+    background-color:darkgreen;
+    width: 100%;
+    color: white;
+    padding: 10px 20px;
+}
+footer p a img{
+    width:20px;
+    height:20px;
+}
+
+.footer-center{
+    text-align: center;
+}
+
+
+
+/* Social link icons grid for footer */
+#social-link-icons {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    padding: 10px;
+    background-color: inherit;
+    margin: 5%;
+}
+
+#contact-details {
+    margin-left: 5%;
+}
+
+#contact-details p a img, #social-link-icons a img {
+    height: 20px;
+    width: 20px;
+}
+
+/** Main body styling */
+main {
+    background-color:inherit;
+    color:inherit;
+    width: 100%;
+    position: relative;
+    margin-top: 200px;
+}
+
+/** Section styling */
+.section {
+    background-color:rgb(189, 253, 106);
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    width:50%;
+}
+
+
+.sections{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+/** Styling for clickable bars inside sections */
+.clickable-bar {
+    background-color: inherit;
+    color: inherit;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border-radius: inherit;
+    border-width: inherit;
+    height: 150px;
+}
+
+.clickable-bar.animate {
+    transform: scale(1.2);
+}
+
+.clickable-bar:hover {
+    background-color: rgb(63, 255, 63);
+    color: rgb(0, 0, 0);
+}
+
+.profile {
+    height: 150px;
+    width: 150px;
+}
+
+.clickable-bar p {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.drop-down-icon{
+    height: 25px;
+    width: 25px;
+}
+
+#visions-icon, #missions-icon, #values-icon{
+    width:150px;
+    height: 150px;
+    border-radius: inherit;
+}
+
+/** Hidden class for toggling visibility */
+.hidden {
+    display: none;
+    overflow: hidden;
+    background-color: inherit;
+    color: inherit;
+    border-top: 0;
+    border-bottom: inherit;
+    border-radius: inherit;
+    border-width: inherit;
+}
+
+
+/** Welcome section styling */
+.welcome p, .footer-center{
+    text-align: center;
+}
+
+main div p {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+}
+
+main h2 {
+    position: relative;
+    left: 10px;
+}
+
+/*Experience Page Styles*/
+.work-header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.work-header img,.schools img{
+    height: 60px;
+    width: 60px;
+    border-radius: inherit;
+}
+
+
+/*Education Page Styles*/
+.schools{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#education,#experience,#skills, #projects{
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    background-color: rgb(189, 253, 106);
+    border-radius: 5px;
+}
+
+#education a, .download-link{
+    text-decoration: none;
+    color:blue;
+
+    position: relative;
+    left: 45%;
+}
+/*Stylesfor Skills Page*/
+.technical-skills,.tools{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap:10px; /*Adds spacing between the items*/
+    padding: 10px;
+    background-color: inherit;
+
+}
+
+.technical-skills div, .tools div{
+    padding: 50px;
+    text-align: left;
+    background-color: inherit;
+    color: inherit;
+}
+
+.technical-skills div img, .tools div img, .project-icon{
+    width : 50px;
+    height: 50px;
+    border-radius: inherit;
+}
+
+
+/** Grid for sections like missions, visions, values */
+#missions, #visions, #values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background-color: inherit;
+}
+
+#missions div img, #visions div img, #values div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+#missions div, #visions div, #values div {
+    padding: 20px;
+    text-align: left;
+    background-color: inherit;
+    color: inherit;
+}
+
+/*Hide mobile menu bar,if the device is a computer*/
+.mobile-menu{display: none;}
+
+
+@media (max-width: 480px) {
+    /* For smartphones */
+
+    /*Menu Bar for Small Screens(smartphones)*/
+    .mobile-menu {
+        background-color: darkgreen;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between; /* Space between title and menu icon */
+        align-items: center; /* Center vertically */
+        width: 100%;
+        color: white;
+        padding: 8px 12px; /* Adjust for smaller screens */
+        z-index: 1000;
+        box-sizing: border-box; /* Include padding in width */
+        flex-wrap: nowrap; /* Prevent wrapping for small screens */
+    }
+
+    .mobile-menu h1 {
+        font-size: 1.2rem; /* Scaled for mobile */
+        white-space: nowrap; /* Prevent wrapping of title */
+        overflow: hidden; /* Prevent overflow */
+        text-overflow: ellipsis; /* Add ellipsis for long titles */
+        margin: 0;
+        flex-shrink: 1; /* Allow the icon to take its space */
+    }
+    #menu-icon {
+        background: none;
+        border: none;
+        font-size: 1.8rem; /* Adjust size for mobile */
+        color: white;
+        cursor: pointer;
+        margin-left: auto; /* Push to the far right */
+        flex-shrink: 0; /* Prevent the icon from shrinking */
+    }
+
+    #menu-items {
+        display: none; /* Hidden initially */
+        list-style: none;
+        margin: 0;
+        padding: 0; /* Remove default padding */
+        position: absolute;
+        top: 100%; /* Align directly below menu bar */
+        right: 0; /* Align to the right edge */
+        background-color: #bee0ff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    #menu-items li{
+        padding: 5px 10px
+    }
+    
+    #menu-items li a{
+        text-decoration: none;
+        color:rgb(36, 77, 190);
+    }
+
+    .mobile-navigation-buttons,.mobile-navigation-buttons-single{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: inherit;
+        align-items: center;
+    }
+   .mobile-navigation-buttons-single a{
+    margin-right: 1.5%;
+   }
+
+    .default-hide a img{
+        width: 20px;
+        height: 20px;
+        margin: 5%;
+        position: relative;
+    }
+
+    body {
+        font-size: 12px;
+    }
+    main{
+        margin-top: 80px;
+    }
+    .section {
+        margin: 5px;
+    }
+
+    header {
+        display: none;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .clickable-bar p {
+        font-size: 12px;
+    }
+    #visions-icon, #missions-icon, #values-icon{
+        width:30px;
+        height: 30px;
+    }
+    #missions, #visions, #values {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #missions div img, #visions div img, #values div img {
+        width:   50px;
+        height:  50px;
+    }
+    .profile
+    {
+        height: 30px;
+        width: 30px;
+    }
+
+    .work-header img, .schools img{
+        width:25px;
+        height: 25px;;
+    }
+
+    .technical-skills,.tools{
+        flex-direction: column;
+        gap:5px; /*Adds spacing between the items*/
+        padding: 5px;
+        background-color: inherit;
+    
+    }
+    
+    .technical-skills div, .tools div{
+        padding: 20px;
+
+    }
+    
+    .technical-skills div img, .tools div img, .project-icon{
+        width : 40px;
+        height: 40px;;
+    }
+
+    .work-header img,.schools img{
+        display: none;
+    }
+}
+
