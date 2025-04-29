@@ -120,7 +120,7 @@ main {
     margin-top: 200px;
 }
 
-/** Section styling */
+/**  styling */
 .section {
     background-color:rgb(189, 253, 106);
     margin-left: 1.5%;
@@ -134,9 +134,7 @@ main {
 
 
 .sections{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     margin-top: 5%;
 }
 /** Styling for clickable bars inside sections */
@@ -197,8 +195,20 @@ main {
 
 
 /** Welcome section styling */
-.welcome p, .footer-center{
+.welcome div p, .footer-center{
     text-align: center;
+}
+.welcome{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-right: 3%;
+    margin-right: 3%;
+}
+.welcome img{
+    height: 200px;
+    width:200px;
+    border-bottom-left-radius: 15px;
 }
 
 main div p {
@@ -228,6 +238,17 @@ main h2 {
 
 
 /*Education Page Styles*/
+.education-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.education-header img{
+    height: 40px;
+    width: 60px;
+    border-radius: inherit;
+}
 .schools{
     display: flex;
     justify-content: space-between;
